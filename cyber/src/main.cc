@@ -22,7 +22,7 @@
 using namespace mdc::mdccan;
 using namespace CanFdMsgHandle;
 using namespace ara::log;
-using namespace AppSpace_new;//zxp	0906
+using namespace AppSpace_new;//zxp	0910
 
 using apollo::cyber::Rate;
 using apollo::cyber::Time;
@@ -440,7 +440,7 @@ void CanFdLDataRecieved(App::AppCore& app, uint8_t channelId, const CanFdBusData
     // 打印接收的CANFd 长包
     for (unsigned int i = 0; i < canBusDataL.elementList.size(); i++) 
 	{
-        logger.LogInfo()<<"canIdType: "<<canBusDataL.elementList[i].canIdType;
+        //logger.LogInfo()<<"canIdType: "<<canBusDataL.elementList[i].canIdType;
          //canId 以十进制打印
         logger.LogInfo()<<"canId: "<<canBusDataL.elementList[i].canId;
         logger.LogInfo()<<"validLen: "<<canBusDataL.elementList[i].validLen;
