@@ -1,0 +1,1783 @@
+syntax = "proto3";
+
+package addcommunication;
+
+message	msg_eec1_e_first_byte_1
+{	    
+    uint32 engine_torque_mode = 1;
+    uint32 Actual_engine_torque_high_resolution = 2;
+}
+
+message msg_eec1_e_sixth_byte_1
+{
+    uint32 engine_starter_mode = 1;
+    uint32 rev1 = 2;
+}
+
+message	msg_eec2_e_first_byte_1
+{
+    uint32 AP_low_idle_switch = 1;
+    uint32 AP_kickdown_switch = 2;
+    uint32 Road_speed_limit_status = 3;
+}
+
+message msg_etc1_tcu_first_byte_1
+{
+    uint32 Transmission_driveline_engaged = 1;
+    uint32 Transmission_Torque_Converter_Lockup_Engaged = 2;
+    uint32 Transmission_shift_in_process = 3;
+    uint32 Transmission_Torque_Converter_Lockup_Transition = 4;
+}
+
+message msg_etc1_tcu_fifth_byte_1
+{
+    uint32 Engine_Momentary_Overspeed_Enable = 1;
+    uint32 Progressive_Shift_Disable = 2;
+    uint32 Momentary_Engine_Maximum_Power_Enable = 3;
+    uint32 not_defined_5_6 = 4;
+}
+
+message msg_ebc1_ebs_first_byte_1
+{
+    uint32 ASR_Engine_Control_Active = 1;
+    uint32 ASR_Brake_Control_Active = 2;
+    uint32 Antilock_braking = 3;
+    uint32 EBS_brake_switch = 4;
+}
+
+message msg_ebc1_ebs_third_byte_1
+{
+    uint32 ABS_Offroad_Switch = 1;
+    uint32 ASR_Offroad_Switch = 2;
+    uint32 ASR_hill_holder_Switch = 3;
+    uint32 Traction_Control_Override_Switch = 4;
+}
+
+message msg_ebc1_ebs_fourth_byte_1
+{
+    uint32 Accelerator_Interlock_Switch = 1;
+    uint32 Engine_Derate_Switch = 2;
+    uint32 Auxiliary_Engine_Shutdown_Switch = 3;
+    uint32 Remote_Accelerator_Enable_Switch = 4;
+}
+
+message msg_ebc1_ebs_sixth_byte_1
+{
+    uint32	ABS_Fully_Operational = 1;
+    uint32	EBS_Red_Warning_Lamp_State = 2;
+    uint32	ABS_EBS_Amber_Warning_State = 3;
+    uint32	ATC_ASR_Lamp_State = 4;
+}
+
+message msg_body_control_adcu_first_byte_1
+{
+    uint32  GasHornActivationSwitch = 1;
+    uint32	ElectricHornActivationSwitch = 2;
+    uint32	ADWiperSwitch = 3;
+    uint32	ADWiperControl = 4;
+}
+
+message msg_body_control_adcu_second_byte_1
+{
+    uint32 ADHeadlampSwitch = 1;
+    uint32 ADHeadlampControl = 2;
+    uint32 TurnLampControl = 3;
+    uint32 BrakelightCommand = 4;
+}
+
+message msg_body_control_adcu_third_byte_1
+{
+    uint32 ADWasherSwitch = 1;
+    uint32 FogLightSwitch = 2;
+    uint32 AmbientLightDisplayRequest = 3;
+}
+
+message msg_body_control_adcu_fourth_byte_1
+{
+    uint32 SeatbeltTightenRequest = 1;
+    uint32 DoorEmergencyUnlocking = 2;
+    uint32 SeatVibrationRequest = 3;
+    uint32 not_defined_1 = 4;
+}
+
+message msg_body_control_adcu_fifth_byte_1
+{
+    uint32 HazardlightSwitch = 1;
+    uint32 RearlightSwitch = 2;
+    uint32 LiftSwitch = 3;
+    uint32 not_defined_2 = 4;
+}
+
+message msg_epbs1_epb_first_byte_1
+{
+    uint32 EPB_ParkBraStatus = 1;
+	uint32 AH_ParkActive = 2;
+	uint32 AH_BraStatus = 3;
+	uint32 EPB_WorkMode = 4;
+}
+
+message msg_epbs1_epb_third_byte_1
+{
+    uint32 ChildLockActive = 1;
+    uint32 LowPreRelParkLimit = 2;
+    uint32 ResponsePriority = 3;
+    uint32 IdepedtBraOly = 4;
+}
+
+message msg_epbs1_epb_fourth_byte_1
+{
+    uint32 PrakBraForcTest = 1;
+    uint32 DriveHillStatus = 2;
+    uint32 EPB_BraSwitch = 3;
+    uint32 ParkBtSwitch = 4;
+}
+
+message msg_epbs1_epb_fifth_byte_1
+{
+    uint32 RelsBtSwitch = 1;
+    uint32 AHBtSwitch = 2;
+    uint32 IdepedtBtSwitch = 3;
+    uint32 ForcTestBtSwitch = 4;
+}
+
+message msg_epbs1_epb_sixth_byte_1
+{
+    uint32 SysStatus = 1;
+    uint32 not_defined_1 = 2;
+    uint32 not_defined_2 = 3;
+    uint32 not_defined_3 = 4;
+}
+
+message msg_ptode_first_byte_1
+{
+    uint32 not_defined_1 = 1;
+    uint32 EnableSwitch_TransmissionInputShaftPTO_1 = 2;
+    uint32 not_defined_2 = 3;
+    uint32 not_defined_3 = 4;
+    uint32 EnableSwitch_TransmissionInputShaftPTO_2 = 5;
+}
+
+message msg_ptode_adcu_first_byte_1
+{
+    uint32 not_defined_1 = 1;
+    uint32 EnableSwitch_TransmissionInputShaftPTO_1 = 2;
+    uint32 not_defined_2 = 3;
+    uint32 not_defined_3 = 4;
+    uint32 EnableSwitch_TransmissionInputShaftPTO_2 = 5;
+}
+
+message msg_ctlinfo1_eps1_kb_eighth_byte_1
+{
+	uint32 Counter = 1;
+	uint32 CSUM = 2;
+}
+
+message msg_ctlinfo2_eps1_kb_first_byte_1
+{
+    uint32 ControlDemandResponse = 1;
+    uint32 CtrlModResp_strAsistExcptActRetu = 2;
+    uint32 CtrlModResp_Activereturn = 3;
+    uint32 CtrlModResp_Overridedetection = 4;
+    uint32 CtrlModResp_TorqueDemand = 5;
+    uint32 CtrlModResp_AngleDemand = 6;
+    uint32 OutputLimitation = 7;
+}
+
+message msg_ctlinfo2_eps1_kb_eighth_byte_1
+{
+    uint32 Counter = 1;
+	uint32 CSUM = 2;
+}
+
+message msg_state_bcm_second_byte_1
+{
+    uint32 RLS_Rain_Intensity = 1;
+    uint32 ADModeOfBCM = 2;
+    uint32 PowerOnSwitchOfADCU = 3;
+}
+
+message msg_state_bcm_third_byte_1
+{
+    uint32 ActiveSwitchOfADCU = 1;
+    uint32 not_defined_2 = 2;
+    uint32 AmbientLightStatus = 3;
+}
+
+message msg_state_bcm_fourth_byte_1
+{
+    uint32 SeatVibrationDrive = 1;
+    uint32 not_defined_3 = 2;
+    uint32 Left_Turn_Switch = 3;
+    uint32 Right_Turn_Switch = 4;
+}
+
+message msg_state_bcm_fifth_byte_1
+{
+    uint32 HazardLightSwitch = 1; 
+    uint32 FogLightOpenSwitch = 2;
+    uint32 FogLightCloseSwitch = 3;
+    uint32 LiftSwitch = 4;
+}
+
+message msg_tsc1_te_first_byte_1
+{
+    uint32 Engine_Override_Control_Mode = 1;
+    uint32 Requested_speed_control_conditions = 2;
+    uint32 Override_Control_Mode_Priority = 3;
+    uint32 not_defined_0 = 4;
+}
+
+message msg_tsc1_te_fifth_byte_1
+{
+    uint32 TSC1_Transmission_Rate = 1;
+    uint32 TSC1_Control_Purpose = 2;
+}
+
+message msg_tsc1_te_sixth_byte_1
+{
+    uint32 Engine_Requested_Torque_High_Resolution = 1;
+    uint32 not_defined_5 = 2;
+}
+
+message msg_tsc1_te_eighth_byte_1
+{
+    uint32 Message_counter = 1;
+    uint32 Message_checksum = 2;
+}
+
+message msg_etc7_first_byte_1
+{
+    uint32 Transmission_Service_Indicator = 1;
+    uint32 not_defined_0 = 2;
+    uint32 not_defined_1 = 3;
+    uint32 not_defined_2 = 4;
+}
+
+message msg_etc7_second_byte_1
+{
+    uint32 Transmission_Ready_for_Brake_Release = 1;
+    uint32 not_defined_3 = 2;
+    uint32 Transmission_Engine_Crank_Enable = 3;
+    uint32 not_defined_4 = 4;
+}
+
+message msg_etc7_third_byte_1
+{
+    uint32 not_defined_5 = 1;
+    uint32 Transmission_Mode_3 = 2;
+    uint32 Transmission_Mode_2 = 3;
+    uint32 Transmission_Mode_1 = 4;
+}
+
+message msg_etc7_fifth_byte_1
+{
+    uint32 Transmission_Mode_5 = 1;
+    uint32 Transmission_Mode_6 = 2;
+    uint32 Transmission_Mode_7 = 3;
+    uint32 Transmission_Mode_8 = 4;
+}
+
+message msg_etc7_sixth_byte_1
+{
+    uint32 Transmission_Reverse_Gear_Shift_Inhibit_Status = 1;
+	uint32 Transmission_Warning_Indicator = 2;
+	uint32 Transmission_Mode_9 = 3;
+	uint32 Transmission_Mode_10 = 4;
+}
+
+message msg_etc7_seventh_byte_1
+{
+    uint32 Transmission_Air_Supply_Pressure = 1;
+    uint32 Transmission_Auto_Neutral_State = 2;
+    uint32 Transmission_Manual_Mode = 3;    
+}
+
+message msg_etc7_eighth_byte_1
+{
+    uint32 Clutch_Overload_Warning = 1;
+    uint32 Clutch_Wear_Warning = 2;
+    uint32 Transmission_Temperature_Too_High = 3;
+    uint32 not_defined_6 = 4;
+}
+
+message msg_radar_front_first_byte_1
+{
+    uint32 S_FLRadarDis1_low = 1;
+}
+
+message msg_radar_front_second_byte_1
+{
+    uint32 S_FLRadarDis1_high = 1;
+    uint32 not_defined_1 = 2;
+    uint32 S_FLadarSts1 = 3;
+    uint32 S_FLRadarDisAlarmLevel1 = 4;
+}
+
+message msg_radar_front_third_byte_1
+{
+    uint32 S_FMLRadarDis2_low = 1;
+}
+
+message msg_radar_front_fourth_byte_1
+{
+    uint32 S_FMLRadarDis2_high = 1;
+    uint32 not_defined_2 = 2;
+    uint32 S_FMLadarSts2 = 3;
+    uint32 S_FMLRadarDisAlarmLevel2 = 4;	
+}
+
+message msg_radar_front_fifth_byte_1
+{
+    uint32 S_FMRRadarDis3_low = 1;
+}
+
+message msg_radar_front_sixth_byte_1
+{
+    uint32 S_FMRRadarDis3_high = 1;
+    uint32 not_defined_3 = 2;
+    uint32 S_FMRadarSts3 = 3;
+    uint32 S_FMRRadarDisAlarmLevel3 = 4;
+}
+
+message msg_radar_front_seventh_byte_1
+{
+    uint32 S_FRadarDis4_low = 1;
+}
+
+message msg_radar_front_eighth_byte_1
+{
+    uint32 S_FRadarDis4_high = 1;
+    uint32 not_defined_4 = 2;
+    uint32 S_FRRadarSts4 = 3;
+    uint32 S_FRRadarDisAlarmLevel4 = 4;
+}
+
+message msg_radar_back_first_byte_1
+{
+    uint32 S_BLRadarDis1_low = 1;
+}
+
+message msg_radar_back_second_byte_1
+{
+    uint32 S_BLRadarDis1_high = 1;
+    uint32 not_defined_1 = 2;
+    uint32 S_BLadarSts1 = 3;
+    uint32 S_BLRadarDisAlarmLevel1 = 4;
+}
+
+message msg_radar_back_third_byte_1
+{
+    uint32 S_BMLRadarDis2_low = 1;
+}
+
+message msg_radar_back_fourth_byte_1
+{
+    uint32 S_BMLRadarDis2_high = 1;
+    uint32 not_defined_2 = 2;
+    uint32 S_BMLadarSts2 = 3;
+    uint32 S_BMLRadarDisAlarmLevel2 = 4;
+}
+
+message msg_radar_back_fifth_byte_1
+{
+    uint32 S_BMRRadarDis3_low = 1;
+}
+
+message msg_radar_back_sixth_byte_1
+{
+    uint32 S_BMRRadarDis3_high = 1;
+    uint32 not_defined_3 = 2;
+    uint32 S_BMRadarSts3 = 3;
+    uint32 S_BMRRadarDisAlarmLevel3 = 4;
+}
+
+message msg_radar_back_seventh_byte_1
+{
+    uint32 S_BRadarDis4_low = 1;
+}
+
+message msg_radar_back_eighth_byte_1
+{
+    uint32 S_BRadarDis4_high = 1;
+    uint32 not_defined_4 = 2;
+    uint32 S_BRRadarSts4 = 3;
+    uint32 S_BRRadarDisAlarmLevel4 = 4;
+}
+
+message msg_radar_side1_first_byte_1
+{
+    uint32 S_SFL_1_RadarDis1_low = 1;
+}
+
+message msg_radar_side1_second_byte_1
+{
+    uint32 S_SFL_1_RadarDis1_high = 1;
+    uint32 not_defined_1 = 2;
+    uint32 S_SFL_1_RadarSts1 = 3;
+    uint32 S_SFL_1_RadarDisAlarmLevel1 = 4;
+}
+
+message msg_radar_side1_third_byte_1
+{
+    uint32 S_SFR_1_RadarDis2_low = 1;
+}
+
+message msg_radar_side1_fourth_byte_1
+{
+    uint32 S_SFR_1_RadarDis2_high = 1;
+    uint32 not_defined_2 = 2;
+    uint32 S_SFR_1_RadarSts2 = 3;
+    uint32 S_SFR_1_RadarDisAlarmLevel2 = 4;
+}
+
+message msg_radar_side1_fifth_byte_1
+{
+    uint32 S_SBL_1_RadarDis3_low = 1;
+}
+
+message msg_radar_side1_sixth_byte_1
+{
+    uint32 S_SBL_1_RadarDis3_high = 1;
+    uint32 not_defined_3 = 2;
+    uint32 S_SBL_1_RadarSts3 = 3;
+    uint32 S_SBL_1_RadarDisAlarmLevel3 = 4;
+}
+
+message msg_radar_side1_seventh_byte_1
+{
+    uint32 S_SBR_1_RadarDis4_low = 1;
+}
+
+message msg_radar_side1_eighth_byte_1
+{
+    uint32 S_SBR_1_RadarDis4_high = 1;
+    uint32 not_defined_4 = 2;
+    uint32 S_SBR_1_RadarSts4 = 3;
+    uint32 S_SBR_1_RadarDisAlarmLevel4 = 4;
+}
+
+message msg_radar_side2_first_byte_1
+{
+    uint32 S_SFL_2_RadarDis1_low = 1;
+}
+
+message msg_radar_side2_second_byte_1
+{
+    uint32 S_SFL_2_RadarDis1_high = 1;
+    uint32 not_defined_1 = 2;
+    uint32 S_SFL_2_RadarSts1 = 3;
+    uint32 S_SFL_2_RadarDisAlarmLevel1 = 4;
+}
+
+message msg_radar_side2_third_byte_1
+{
+    uint32 S_SFR_2_RadarDis2_low = 1;
+}
+
+message msg_radar_side2_fourth_byte_1
+{
+    uint32 S_SFR_2_RadarDis2_high = 1;
+    uint32 not_defined_2 = 2;
+    uint32 S_SFR_2_RadarSts2 = 3;
+    uint32 S_SFR_2_RadarDisAlarmLevel2 = 4;    
+}
+
+message msg_radar_side2_fifth_byte_1
+{
+    uint32 S_SBL_2_RadarDis3_low = 1;
+}
+
+message msg_radar_side2_sixth_byte_1
+{
+    uint32 S_SBL_2_RadarDis3_high = 1;
+    uint32 not_defined_3 = 2;
+    uint32 S_SBL_2_RadarSts3 = 3;
+    uint32 S_SBL_2_RadarDisAlarmLevel3 = 4;    
+}
+
+message msg_radar_side2_seventh_byte_1
+{
+    uint32 S_SBR_2_RadarDis4_low = 1;
+}
+
+message msg_radar_side2_eighth_byte_1
+{
+    uint32 S_SBR_2_RadarDis4_high = 1;
+    uint32 not_defined_4 = 2;
+    uint32 S_SBR_2_RadarSts4 = 3;
+    uint32 S_SBR_2_RadarDisAlarmLevel4 = 4;
+}
+
+message msg_mc1_hcu_first_byte_1
+{
+    uint32 MC1_MCU_Enable = 1;
+    uint32 MC1_Mor_Work_Mode = 2;
+    uint32 MC1_Mor_Con_Mode = 3;
+    uint32 MC1_QuickOFF = 4;
+}
+
+message msg_ccvs1_hcu_first_byte_1
+{
+    uint32 TwoSpeedAxleSwitch = 1;
+    uint32 ParkingBrakeSwitch = 2;
+    uint32 CruiseCtrlPauseSwitch = 3;
+    uint32 ParkBrakeReleaseInhibitRq = 4;
+}
+
+message msg_ccvs1_hcu_fourth_byte_1
+{
+    uint32 CruiseCtrlActive = 1;
+    uint32 CruiseCtrlEnableSwitch = 2;
+    uint32 BrakeSwitch = 3;
+    uint32 ClutchSwitch = 4;    
+}
+
+message msg_ccvs1_hcu_fifth_byte_1
+{
+    uint32 CruiseCtrlSetSwitch = 1;
+    uint32 CruiseCtrlCoastSwitch = 2;
+    uint32 CruiseCtrlResumeSwitch = 3;
+    uint32 CruiseCtrlAccelerateSwitch = 4;    
+}
+
+message msg_ccvs1_hcu_seventh_byte_1
+{
+    uint32 PTOGovernorState = 1;
+    uint32 CruiseCtrlStates = 2;    
+}
+
+message msg_ccvs1_hcu_eighth_byte_1
+{
+    uint32 EngIdleIncrementSwitch = 1;
+    uint32 EngIdleDecrementSwitch = 2;
+    uint32 EngTestModeSwitch = 3;
+    uint32 EngShutdownOverrideSwitch = 4;   
+}
+
+message msg_tsc1_ae_first_byte_1
+{
+    uint32 EngOverrideCtrlMode_21 = 1;
+    uint32 EngRqedSpeedCtrlConditions_21 = 2;
+    uint32 OverrideCtrlModePriority_21 = 3;
+    uint32 rev = 4;    
+}
+
+message msg_tsc1_ae_fifth_byte_1
+{
+    uint32 TransmissionRate_21 = 1;
+    uint32 ControlPurpose_21 = 2;    
+}
+
+message msg_tsc1_ae_sixth_byte_1
+{
+    uint32 Engine_Requested_Torque = 1;
+    uint32 not_defined = 2;
+}
+
+message msg_tsc1_ae_eighth_byte_1
+{
+    uint32 MessageCounter_21 = 1;
+    uint32 MessageChecksum_21 = 2;
+}
+
+message msg_epb1_first_byte_1
+{
+    uint32 ParkBtSwitch = 1;
+    uint32 RelsBtSwitch = 2;
+    uint32 AH_BraStatus = 3;
+    uint32 EPB_WorkMode = 4;    
+}
+
+message msg_epb1_second_byte_1
+{
+    uint32 Reason_for_inhibition_EPB_release = 1;
+    uint32 AHBtSwitch = 2;
+    uint32 IdepedtBtSwitch = 3;	    
+}
+
+message msg_epb1_third_byte_1
+{
+    uint32 Auto_Hold = 1;
+    uint32 ForcTestBtSwitch = 2;
+    uint32 WarmingStatus = 3;
+    uint32 ResponsePriority = 4;
+}
+
+message msg_epb1_fourth_byte_1
+{
+    uint32 IdepedtBraOly = 1;
+    uint32 PrakBraForcTest = 2;
+    uint32 SysStatus = 3;
+    uint32 EPB_BraSwitch = 4;    
+}
+
+message msg_epb1_eighth_byte_1
+{
+    uint32 not_defined = 1;
+    uint32 EPBADModeStatePS = 2;
+}
+
+message msg_ms2_mcu_first_byte_1
+{
+    uint32 MS2_Mor_State_Feed = 1;
+    uint32 MS2_Mor_Work_Mode = 2;
+}
+
+message msg_ms2_mcu_seventh_byte_1
+{
+    uint32 MS2_MorCtrl_Requ = 1;
+    uint32 not_defined = 2;
+    uint32 MS2_CycMsg_Num = 3;
+}
+
+message msg_eec1_e  //0x0CF00400
+{
+	oneof msg_eec1_e_firstByte
+	{
+		uint32 first_byte_1 = 1;
+		msg_eec1_e_first_byte_1 eec1_e_first_byte_1 = 2;
+	};
+    uint32 Driver_demand_engine_torque = 3;
+    uint32 Actual_engine_torque = 4;
+	uint32 Engine_speed_low = 5; 
+	uint32 Engine_speed_high = 6; 
+	uint32 address_of_controlling_device = 7; 
+    oneof eec1_e_sixthByte
+    {
+        uint32 sixth_byte_1 = 8;
+        msg_eec1_e_sixth_byte_1 eec1_e_sixth_byte_1 = 9;
+    };
+    uint32 engine_demand_percent_torque = 10;
+
+}
+
+message msg_eec2_e  //0x0CF00300
+{
+    oneof msg_eec2_e_firstByte
+	{
+		uint32 first_byte_1 = 1;
+        msg_eec2_e_first_byte_1 eec2_e_first_byte_1 = 2;
+	};
+    uint32 Accelerator_pedal_position = 3;
+    uint32 Percent_load_at_current_speed = 4;
+	uint32 Remote_accelerator = 5 ; 
+	uint32 Accelerator_pedal_position_2 = 6; 
+	uint32 not_defined_5 = 7;
+	uint32 Actual_Maximum_Available_Engine = 8; 
+	uint32 not_defined_7 = 9; 
+}
+
+message msg_etc1_tcu    //0x0CF00203
+{
+    oneof msg_etc1_tcu_firstByte
+    {
+         uint32 first_byte_1 = 1;
+         msg_etc1_tcu_first_byte_1 etc1_tcu_first_byte_1 = 2;
+    };
+    uint32 Transmission_Output_Shaft_Speed = 3;
+    uint32 Percent_clutch_slip = 4;
+    oneof msg_etc1_tcu_fifthByte
+    {
+        uint32 fifth_byte_1 = 5;
+        msg_etc1_tcu_fifth_byte_1 etc1_tcu_fifth_byte_1 = 6;
+    };
+    uint32 Transmission_input_shaft_speed =7;
+    uint32 Source_address_of_controlling_device_for_transmission_control = 8;
+}
+
+message msg_etc2_tcu    //0x18F00503
+{
+    uint32 selected_gear = 1; 
+	uint32 Transmission_Actual_Gear_Ratio_low = 2; 
+	uint32 Transmission_Actual_Gear_Ratio_high = 3; 
+	uint32 Current_Gear = 4; 
+}
+
+message msg_ebc1_ebs    //0x18F0010B
+{
+    oneof msg_ebc1_ebs_firstByte
+    {
+         uint32 first_byte_1 = 1;
+         msg_ebc1_ebs_first_byte_1 ebc1_ebs_first_byte_1 = 2;
+    };
+    uint32 Brake_Pedal_Position = 3;
+    oneof msg_ebc1_ebs_thirdByte
+    {
+        uint32 third_byte_1 = 4;
+        msg_ebc1_ebs_third_byte_1 ebc1_ebs_third_byte_1 = 5;
+    };
+    oneof msg_ebc1_ebs_fourthByte
+    {
+        uint32 fourth_byte_1 = 6;
+        msg_ebc1_ebs_fourth_byte_1 ebc1_ebs_fourth_byte_1 = 7;
+    };
+    uint32 Engine_Retarder_Selection = 8;
+    oneof msg_ebc1_ebs_sixthByte
+    {
+        uint32 sixth_byte_1 = 9;
+        msg_ebc1_ebs_sixth_byte_1 ebc1_ebs_sixth_byte_1 = 10;
+    };
+    uint32 Source_Address_of_Controlling_Device_for_Brake_Control = 11;
+	uint32 not_defined_7 = 12;
+}
+
+message msg_body_control_adcu   //0x18FF669E
+{
+    oneof msg_body_control_adcu_firstByte
+    {
+        uint32 first_byte_1 = 1;
+        msg_body_control_adcu_first_byte_1 body_control_adcu_first_byte_1 = 2;
+    };
+    oneof msg_body_control_adcu_secondByte
+    {
+        uint32 second_byte_1 = 3;
+        msg_body_control_adcu_second_byte_1 body_control_adcu_second_byte_1 = 4;
+    };
+    oneof msg_body_control_adcu_thirdByte
+    {
+        uint32 third_byte_1 = 5;
+        msg_body_control_adcu_third_byte_1 body_control_adcu_third_byte_1 = 6;
+    };
+    oneof msg_body_control_adcu_fourthByte
+    {
+        uint32 fourth_byte_1 = 7;
+        msg_body_control_adcu_fourth_byte_1 body_control_adcu_fourth_byte_1 = 8;
+    };
+    oneof msg_body_control_adcu_fifthByte
+    {
+        uint32 fifth_byte_1 = 9;
+        msg_body_control_adcu_fifth_byte_1 body_control_adcu_fifth_byte_1 = 10;
+    }
+}
+
+message msg_epbs1_epb   //0x18FE1264
+{
+    oneof msg_epbs1_epb_firstByte
+    {
+        uint32 first_byte_1 = 1;
+        msg_epbs1_epb_first_byte_1 epbs1_epb_first_byte_1 = 2;
+    };
+    uint32 ErrCode = 3; 
+    oneof msg_epbs1_epb_thirdByte
+    {
+        uint32 third_byte_1 = 4;
+        msg_epbs1_epb_third_byte_1 epbs1_epb_third_byte_1 = 5;
+    };
+    oneof msg_epbs1_epb_fourthByte
+    {
+        uint32 fourth_byte_1 = 6;
+        msg_epbs1_epb_fourth_byte_1 epbs1_epb_fourth_byte_1 = 7;
+    };
+    oneof msg_epbs1_epb_fifthByte
+    {
+        uint32 fifth_byte_1 = 8;
+        msg_epbs1_epb_fifth_byte_1 epbs1_epb_fifth_byte_1 = 9;
+    }
+    oneof msg_epbs1_epb_sixthByte
+    {
+        uint32 sixth_byte_1 = 10;
+        msg_epbs1_epb_sixth_byte_1 epbs1_epb_sixth_byte_1 = 11;        
+    }
+}
+
+message msg_epbc1_adu   //0x18EA64EF
+{
+    uint32 ExternalBrakeControl = 1;
+    uint32 TractorBrakeControl = 2;
+	uint32 TrailerBrakeControl = 3;
+	uint32 ParkingBrakeControl = 4;
+	uint32 AutoholdBrakeControl = 5;
+	uint32 WorkingMode = 6;
+	uint32 CSUM = 7;
+}
+
+message msg_ptode   //0x18FDA403
+{
+    oneof msg_ptode_firstByte
+    {
+        uint32 first_byte_1 = 1;
+        msg_ptode_first_byte_1 ptode_first_byte_1 = 2;
+    }
+}
+
+message msg_ptode_adcu  //0x18FDA49E
+{
+    oneof msg_ptode_adcu_firstByte
+    {
+        uint32 first_byte_1 = 1;
+        msg_ptode_adcu_first_byte_1 ptode_adcu_first_byte_1 = 2;
+    }
+} 
+
+message msg_ebc2_ebs    //C-CAN 0x18FEBF0B
+{
+    uint32 Front_Axle_Speed_low = 1;
+	uint32 Front_Axle_Speed_high = 2;
+	uint32 Relative_Speed_Front_Axle_Left_Wheel = 3;
+	uint32 Relative_Speed_Front_Axle_Right_Wheel = 4;
+	uint32 Relative_Speed_Rear_Axle_1_Left_Wheel = 5;
+	uint32 Relative_Speed_Rear_Axle_1_Right_Wheel = 6;
+	uint32 Relative_Speed_Rear_Axle_2_Left_Wheel = 7;
+	uint32 Relative_Speed_Rear_Axle_2_Right_Wheel = 8;
+}
+
+message msg_ctlinfo1_eps1_kb    //P-CAN 0x18FF4713
+{
+    uint32 SteeringAngle_low = 1;
+	uint32 SteeringAngle_high = 2;
+	uint32 SteeringAngleSpeed_low = 3; 
+	uint32 SteeringAngleSpeed_high = 4; 
+	uint32 SteeringTorque_low = 5;
+	uint32 SteeringTorque_high = 6;
+	uint32 not_defiend = 7;
+    oneof msg_ctlinfo1_eps1_kb_eighthByte
+    {
+        uint32 eighth_byte = 8;
+        msg_ctlinfo1_eps1_kb_eighth_byte_1 ctlinfo1_eps1_kb_eighth_byte_1 = 9;
+    }
+}
+
+message msg_ctlinfo2_eps1_kb    //P-CAN 0x18FF4813
+{
+    oneof msg_ctlinfo2_eps1_kb_firstByte
+    {
+        uint32 first_byte_1 = 1;
+        msg_ctlinfo2_eps1_kb_first_byte_1 ctlinfo2_eps1_kb_first_byte_1 = 2;
+    };
+    uint32 CurrentConsumption = 3;
+	uint32 SteeringAssistTorque_low = 4;
+	uint32 SteeringAssistTorque_high = 5;
+	uint32 TotalTorque_low = 6;
+	uint32 TotalTorque_high = 7;
+	uint32 not_defiend = 8;
+    oneof msg_ctlinfo2_eps1_kb_eighthByte
+    {
+        uint32 eighth_byte = 9;
+        msg_ctlinfo2_eps1_kb_eighth_byte_1 ctlinfo2_eps1_kb_eighth_byte_1 = 10;
+    }
+}
+
+message msg_state_bcm   //P-CAN 0x18FF6832
+{
+    uint32 RLS_Brightness_FW = 1;
+    oneof msg_state_bcm_secondByte
+    {
+        uint32 second_byte_1 = 2;
+        msg_state_bcm_second_byte_1 state_bcm_second_byte_1 = 3;
+    };
+    oneof msg_state_bcm_thirdByte
+    {
+        uint32 third_byte_1 = 4;
+        msg_state_bcm_third_byte_1 state_bcm_third_byte_1 = 5;
+    };
+    oneof msg_state_bcm_fourthByte
+    {
+        uint32 fourth_byte_1 = 6;
+        msg_state_bcm_fourth_byte_1 state_bcm_fourth_byte_1 = 7; 
+    };
+    oneof msg_state_bcm_fifthByte
+    {
+        uint32 fifth_byte_1 = 8;
+        msg_state_bcm_fifth_byte_1 state_bcm_fifth_byte_1 = 9;
+    };
+    uint32 not_defined_5 = 10;
+	uint32 not_defined_6 = 11;
+	uint32 not_defined_7 = 12; 
+}
+
+message msg_tsc1_te //P-CAN 0x0C000003
+{
+    oneof msg_tsc1_te_firstByte
+    {
+        uint32 first_byte_1 = 1;
+        msg_tsc1_te_first_byte_1 tsc1_te_first_byte_1 = 2;
+    };
+    uint32 Engine_Requested_Speed_low = 3;
+	uint32 Engine_Requested_Speed_high = 4; 
+	uint32 Engine_Requested_Torque = 5;
+    oneof msg_tsc1_te_fifthByte
+    {
+        uint32 fifth_byte_1 = 6;
+        msg_tsc1_te_fifth_byte_1 tsc1_te_fifth_byte_1= 7;
+    };
+    oneof msg_tsc1_te_sixthByte
+    {
+        uint32 sixth_byte_1 = 8;
+        msg_tsc1_te_sixth_byte_1 tsc1_te_sixth_byte_1 = 9;
+    };
+    uint32 not_defined_6 = 10;
+    oneof msg_tsc1_te_eighthByte
+    {
+        uint32 eight_byte_1 = 11;
+        msg_tsc1_te_eighth_byte_1 tsc1_te_eighth_byte_1  = 12;
+    }
+}
+
+message msg_etc7    //P-CAN 0x18FE4A03
+{
+    oneof msg_etc7_firstByte
+    {
+        uint32 first_byte_1 = 1;
+        msg_etc7_first_byte_1 etc7_first_byte_1 = 2;
+    };
+    oneof msg_etc7_secondByte
+    {
+        uint32 second_byte_1 = 3;
+        msg_etc7_second_byte_1 etc7_second_byte_1 = 4;
+    };
+    oneof msg_etc7_thirdByte
+    {
+        uint32 third_byte_1 = 5;
+        msg_etc7_third_byte_1 etc7_third_byte_1 = 6;
+    };
+    uint32 Transmission_Requested_Gear_Feedback = 7;
+    oneof msg_etc7_fifthByte
+    {
+        uint32 fifth_byte_1 = 8;
+        msg_etc7_fifth_byte_1 etc7_fifth_byte_1 = 9;
+    };
+    oneof msg_etc7_sixthByte
+    {
+        uint32 sixth_byte_1 = 10;
+        msg_etc7_sixth_byte_1 etc7_sixth_byte_1 = 11;
+    };
+    oneof msg_etc7_seventhByte
+    {
+        uint32 seventh_byte_1 = 12;
+        msg_etc7_seventh_byte_1 etc7_seventh_byte_1 = 13;
+    };    
+    oneof msg_etc7_eighthByte
+    {
+        uint32 eighth_byte_1 = 14;
+        msg_etc7_eighth_byte_1 etc7_eighth_byte_1 = 15;
+    }; 
+}
+
+message msg_adcu_to_tbox_1  //0x19FF509E
+{
+    	uint32 adcu_ctrl_mode = 1; //0
+		uint32 scene_type = 2;     //1
+		uint32 action_type = 3;    //2
+		uint32 error_code = 4;     //3
+	    int32 x_1 = 5;               //2023.2.22
+	    int32 x_2 = 6;               //2023.2.22
+	    int32 y_1 = 7;               //2023.2.22
+	    int32 y_2 = 8;               //2023.2.22
+	    int32 z_1 = 9;               //2023.2.22
+	    int32 z_2 = 10;               //2023.2.22
+		uint32 speed = 11;
+		int32 direction_angle_range = 12;   //2023.1.11
+		uint32 course_angle = 13;         //2023.2.1
+		uint32 sys_state = 14;
+		uint32 manual_state = 15;
+		uint32 lidar_state = 16;
+		uint32 sonar_state = 17;
+		uint32 camera_state = 18;
+		uint32 acc_speed = 19;
+		uint32 ADCU_power_state = 20;
+}
+
+message msg_adcu_to_tbox_2  //0x19FF599E
+{
+    uint32 first_obj_id = 1;
+	uint32 first_obj_type = 2;
+	uint32 first_obj_speed = 3;
+	uint32 first_obj_dis = 4;
+	uint32 second_obj_id = 5;
+	uint32 second_obj_type = 6;
+	uint32 second_obj_speed = 7;
+	uint32 second_obj_dis = 8;
+	uint32 third_obj_id = 9;
+	uint32 third_obj_type = 11;
+	uint32 third_obj_speed = 12;
+	uint32 third_obj_dis = 13;
+	uint32 fourth_obj_id = 14;
+	uint32 fourth_obj_type = 15;
+	uint32 fourth_obj_speed = 16;
+	uint32 fourth_obj_dis = 17;
+	uint32 fifth_obj_id = 18;
+	uint32 fifth_obj_type = 19;
+	uint32 fifth_obj_speed = 20;
+	uint32 fifth_obj_dis = 21;
+	uint32 sixth_obj_id = 22;
+	uint32 sixth_obj_type = 23;
+	uint32 sixth_obj_speed = 24;
+	uint32 sixth_obj_dis = 25;
+	uint32 seventh_obj_id = 26;
+	uint32 seventh_obj_type = 27;
+	uint32 seventh_obj_speed = 28;
+	uint32 seventh_obj_dis = 29;
+	uint32 eighth_obj_id = 30;
+	uint32 eighth_obj_type = 31;
+	uint32 eighth_obj_speed = 32;
+	uint32 eighth_obj_dis = 33;
+}
+
+message msg_adcu_to_tbox_3  //0x19FF609E
+{
+    uint32 lateral_deviation = 1;
+    uint32 global_course_angle = 2;
+    uint32 curvature = 3;
+    uint32 target_speed = 4;
+    uint32 target_acc = 5;
+    uint32 bev_id = 6;
+    //repeated uint32 dis_to_target[4] = 7;
+    repeated uint32 dis_to_target = 7;
+    //u_int8_t path_id;//2023.1.11
+    uint32 rev1 = 8;
+    uint32 request_gear = 9;
+    //repeated uint32 plan_track_point[4] = 10;
+    repeated uint32 plan_track_point = 10;
+    //repeated uint32 target_obj_id[4] = 11;
+    repeated uint32 target_obj_id = 11;
+    //repeated uint32 target_obj_dis[4] = 12;
+    repeated uint32 target_obj_dis = 12;
+    //repeated uint32 target_obj_speed[4] = 13;
+    repeated uint32 target_obj_speed = 13;
+    //u_int32_t course_angle_off;
+    uint32 creep_state = 14;
+    uint32 lift_state = 15;
+    //u_int32_t path_id;
+    //repeated uint32 path_id[4] = 16;//2023.4.7 id
+    repeated uint32 path_id = 16;//2023.4.7 id
+    uint32 rev = 17;
+}
+
+message msg_adcu_to_tbox_4  //0x19FF619E
+{
+    uint32 Acceleration_from_Vehicle = 1;  //车辆实际加速度  2023.1.11加
+}
+
+message msg_tbox_move   //0x19FF52DE
+{
+    uint32 packnum = 1;
+	uint32 packseq = 2;
+	//repeated uint32 questnum[8];
+    repeated uint32 questnum = 3;
+	uint32 questtype = 4;
+	uint32 questoperation = 5;
+	uint32 limitspeed = 6;
+	//uint32 start_X[8];
+    repeated uint32 start_X = 7;
+	//uint32 start_Y[8];
+    repeated uint32 start_Y = 8;
+	//uint32 start_Z[8];
+    repeated uint32 start_Z = 9;
+	//uint32 end_X[8];
+    repeated uint32 end_X = 10;
+	//uint32 end_Y[8];
+    repeated uint32 end_Y = 11;
+	//uint32 end_Z[8];
+    repeated uint32 end_Z = 12;
+	uint32 rev = 13;
+	uint32 rev2 = 14;
+}
+
+message msg_tbox_move_id    //0x19FF52DE
+{
+    uint32 packnum = 1;
+	uint32 packseq = 2;
+    //uint32 questnum;
+	repeated uint32 questnum = 3;
+	uint32 idlength = 4;
+    //uint32 id[13];
+	repeated uint32 id = 5;
+	uint32 revv = 6;
+}
+
+message msg_tbox_drop   //0x19FF53DE
+{
+    //uint32 questnum[8];
+    repeated uint32 questnum = 1;
+	uint32 questtype = 2;
+	uint32 questoperation = 3;
+	uint64 rev1 = 4;
+	uint64 rev2 = 5;
+	uint64 rev3 = 6;
+	uint64 rev4 = 7;
+	uint64 rev5 = 8;
+	uint64 rev6 = 9;
+	uint64 rev7 = 10;
+	uint64 rev8 = 11;
+	uint32 rev9 = 12;
+}
+
+message msg_tbox_joint  //0x19FF54DE
+{
+    //uint32 questnum[8];
+	repeated uint32 questnum = 1;
+    uint32 questtype = 2;
+	uint32 slowguide = 3;
+	uint32 joint_point = 4;
+	uint32 joint_method = 5;
+	uint32 rev1 = 6;
+	uint32 rev2 = 7;
+	uint64 rev3 = 8;
+	uint64 rev4 = 9;
+	uint64 rev5 = 10;
+	uint64 rev6 = 11;
+	uint64 rev7 = 12;
+	uint64 rev8 = 13;
+	uint32 rev9 = 14;
+	uint64 rev10 = 15;
+}
+
+message msg_tbox_automodeset    //19FF559E
+{
+    uint64 questnum = 1;
+	uint32 questtype = 2;
+	uint32 slowguide = 3;
+	uint32 joint_point = 4;
+	uint32 joint_method = 5;
+	uint32 rev1 = 6;
+	uint32 rev2 = 7;
+	uint64 rev3 = 8;
+	uint64 rev4 = 9;
+	uint64 rev5 = 10;
+	uint64 rev6 = 11;
+	uint64 rev7 = 12;
+	uint64 rev8 = 13;
+}
+
+message msg_tbox_move_state     //19FF569E
+{
+    //uint32 questnum[8];
+	repeated uint32 questnum = 1;
+    //uint32 timestamp[6];
+	repeated uint32 timestamp = 2;
+    uint32 questtype = 3;
+	uint32 queststate = 4;
+	uint64 rev3 = 5;
+	uint64 rev4 = 6;
+	uint64 rev5 = 7;
+	uint64 rev6 = 8;
+	uint64 rev7 = 9;
+	uint64 rev8 = 10;
+}
+
+message msg_tbox_drop_state     //19FF579E
+{
+	//u_int8_t questnum[8];
+    repeated uint32 questnum = 1;
+	//u_int8_t timestamp[6];
+    repeated uint32 timestamp = 2;
+	uint32 questtype = 3;
+	uint32 queststate = 4;
+	uint32 slow_feedback = 5;
+	uint32 rev1 = 6;
+	uint32 rev2 = 7;
+	uint32 rev3 = 8;
+	uint64 rev4 = 9;
+	uint64 rev5 = 10;
+	uint64 rev6 = 11;
+	uint64 rev7 = 12;
+	uint64 rev8 = 13;    
+}
+
+message msg_tbox_joint_state    //19FF589E
+{
+	//u_int8_t questnum[8];
+    repeated uint32 questnum = 1;
+	//u_int8_t timestamp[6];
+    repeated uint32 timestamp = 2;
+	uint32 questtype = 3;
+	uint32 queststate = 4;
+	uint32 slow_feedback = 5;
+	uint32 rev1 = 6;
+	uint32 rev2 = 7;
+	uint32 rev3 = 8;
+	uint64 rev4 = 9;
+	uint64 rev5 = 10;
+	uint64 rev6 = 11;
+	uint64 rev7 = 12;
+	uint64 rev8 = 13;
+}
+
+message msg_radar_front     //0x19D2E2D6
+{
+    oneof msg_radar_front_firstByte
+    {
+        uint32 first_byte_1 = 1;
+        msg_radar_front_first_byte_1 radar_front_first_byte_1 = 2;
+    };
+    oneof msg_radar_front_secondByte
+    {
+        uint32 second_byte_1 = 3;
+        msg_radar_front_second_byte_1 radar_front_second_byte_1 = 4;
+    }; 
+    oneof msg_radar_front_thirdByte
+    {
+        uint32 third_byte_1 = 5;
+        msg_radar_front_third_byte_1 radar_front_third_byte_1 = 6;
+    };    
+    oneof msg_radar_front_fourthByte
+    {
+        uint32 fourth_byte_1 = 7;
+        msg_radar_front_fourth_byte_1 radar_front_fourth_byte_1 = 8;
+    };    
+    oneof msg_radar_front_fifthByte
+    {
+        uint32 fifth_byte_1 = 9;
+        msg_radar_front_fifth_byte_1 radar_front_fifth_byte_1 = 10;
+    };
+    oneof msg_radar_front_sixthByte
+    {
+        uint32 sixth_byte_1 = 11;
+        msg_radar_front_sixth_byte_1 radar_front_sixth_byte_1 = 12;
+    };
+    oneof msg_radar_front_seventhByte
+    {
+        uint32 seventh_byte_1 = 13;
+        msg_radar_front_seventh_byte_1 radar_front_seventh_byte_1 = 14;
+    };
+    oneof msg_radar_front_eighthByte
+    {
+        uint32 eighth_byte_1 = 15;
+        msg_radar_front_eighth_byte_1 radar_front_eighth_byte_1 = 16;
+    };
+}
+
+message msg_radar_back  //P-CAN 0x19D2E3D6
+{
+    oneof msg_radar_back_firstByte
+    {
+        uint32 first_byte_1 = 1;
+        msg_radar_back_first_byte_1 radar_back_first_byte_1 = 2; 
+    };
+    oneof msg_radar_back_secondByte
+    {
+        uint32 second_byte_1 = 3;
+        msg_radar_back_second_byte_1 radar_back_second_byte_1 = 4; 
+    };
+    oneof msg_radar_back_thirdByte
+    {
+        uint32 third_byte_1 = 5;
+        msg_radar_back_third_byte_1 radar_back_third_byte_1 = 6; 
+    };
+    oneof msg_radar_back_fourthByte
+    {
+        uint32 fourth_byte_1 = 7;
+        msg_radar_back_fourth_byte_1 radar_back_fourth_byte_1 = 8; 
+    };
+    oneof msg_radar_back_fifthByte
+    {
+        uint32 fifth_byte_1 = 9;
+        msg_radar_back_fifth_byte_1 radar_back_fifth_byte_1 = 10; 
+    };   
+    oneof msg_radar_back_sixthByte
+    {
+        uint32 sixth_byte_1 = 11;
+        msg_radar_back_sixth_byte_1 radar_back_sixth_byte_1 = 12; 
+    }; 
+    oneof msg_radar_back_seventhByte
+    {
+        uint32 seventh_byte_1 = 13;
+        msg_radar_back_seventh_byte_1 radar_back_seventh_byte_1 = 14; 
+    }; 
+    oneof msg_radar_back_eighthByte
+    {
+        uint32 eighth_byte_1 = 15;
+        msg_radar_back_eighth_byte_1 radar_back_eighth_byte_1 = 16; 
+    };     
+}
+
+message msg_radar_side1     //P-CAN 0x19D2E4D6
+{
+    oneof msg_radar_side1_firstByte
+    {
+        uint32 first_byte_1 = 1;
+        msg_radar_side1_first_byte_1 radar_side1_first_byte_1 = 2; 
+    };
+    oneof msg_radar_side1_secondByte
+    {
+        uint32 second_byte_1 = 3;
+        msg_radar_side1_second_byte_1 radar_side1_second_byte_1 = 4; 
+    };
+    oneof msg_radar_side1_thirdByte
+    {
+        uint32 third_byte_1 = 5;
+        msg_radar_side1_third_byte_1 radar_side1_third_byte_1 = 6; 
+    };
+    oneof msg_radar_side1_fourthByte
+    {
+        uint32 fourth_byte_1 = 7;
+        msg_radar_side1_fourth_byte_1 radar_side1_fourth_byte_1 = 8; 
+    };
+    oneof msg_radar_side1_fifthByte
+    {
+        uint32 fifth_byte_1 = 9;
+        msg_radar_side1_fifth_byte_1 radar_side1_fifth_byte_1 = 10; 
+    };   
+    oneof msg_radar_side1_sixthByte
+    {
+        uint32 sixth_byte_1 = 11;
+        msg_radar_side1_sixth_byte_1 radar_side1_sixth_byte_1 = 12; 
+    }; 
+    oneof msg_radar_side1_seventhByte
+    {
+        uint32 seventh_byte_1 = 13;
+        msg_radar_side1_seventh_byte_1 radar_side1_seventh_byte_1 = 14; 
+    }; 
+    oneof msg_radar_side1_eighthByte
+    {
+        uint32 eighth_byte_1 = 15;
+        msg_radar_side1_eighth_byte_1 radar_side1_eighth_byte_1 = 16; 
+    };       
+}
+
+message msg_radar_side2     //P-CAN 0x19D2E5D6
+{
+    oneof msg_radar_side2_firstByte
+    {
+        uint32 first_byte_1 = 1;
+        msg_radar_side2_first_byte_1 radar_side2_first_byte_1 = 2; 
+    };
+    oneof msg_radar_side2_secondByte
+    {
+        uint32 second_byte_1 = 3;
+        msg_radar_side2_second_byte_1 radar_side2_second_byte_1 = 4; 
+    };
+    oneof msg_radar_side2_thirdByte
+    {
+        uint32 third_byte_1 = 5;
+        msg_radar_side2_third_byte_1 radar_side2_third_byte_1 = 6; 
+    };
+    oneof msg_radar_side2_fourthByte
+    {
+        uint32 fourth_byte_1 = 7;
+        msg_radar_side2_fourth_byte_1 radar_side2_fourth_byte_1 = 8; 
+    };
+    oneof msg_radar_side2_fifthByte
+    {
+        uint32 fifth_byte_1 = 9;
+        msg_radar_side2_fifth_byte_1 radar_side2_fifth_byte_1 = 10; 
+    };   
+    oneof msg_radar_side2_sixthByte
+    {
+        uint32 sixth_byte_1 = 11;
+        msg_radar_side2_sixth_byte_1 radar_side2_sixth_byte_1 = 12; 
+    }; 
+    oneof msg_radar_side2_seventhByte
+    {
+        uint32 seventh_byte_1 = 13;
+        msg_radar_side2_seventh_byte_1 radar_side2_seventh_byte_1 = 14; 
+    }; 
+    oneof msg_radar_side2_eighthByte
+    {
+        uint32 eighth_byte_1 = 15;
+        msg_radar_side2_eighth_byte_1 radar_side2_eighth_byte_1 = 16; 
+    };       
+}
+
+message msg_ms1_mcu     //A-CAN 0x0CFF11EF
+{
+	uint32 MS1_Mor_Curr_AC_low = 1;
+	uint32 MS1_Mor_Curr_AC_high = 2;
+	uint32 MS1_Mor_Volta_AC_low = 3;
+	uint32 MS1_Mor_Volta_AC_high = 4;
+	uint32 MS1_Mor_Spd_Cent_low = 5;
+	uint32 MS1_Mor_Spd_Cent_high = 6;
+	uint32 MS1_Mor_Trq_Cent_low = 7;
+	uint32 MS1_Mor_Trq_Cent_high = 8;
+}
+
+message msg_mc1_hcu     //A-CAN 0x0CFF0A31
+{
+    oneof msg_mc1_hcu_firstByte
+    {
+        uint32 first_byte_1 = 1;
+        msg_mc1_hcu_first_byte_1 mc1_hcu_first_byte_1 = 2;
+    };
+    uint32 rev1 = 3;
+	uint32 MC1_Mor_Tgt_Spd_low = 4;
+	uint32 MC1_Mor_Tgt_Spd_high = 5;
+	uint32 MC1_Mor_Tgt_Trq_low = 6;
+	uint32 MC1_Mor_Tgt_Trq_high = 7;
+	uint32 MC1_CycMsg_Num = 8;
+	uint32 MC1_Accped = 9;
+}
+
+message msg_ccvs1_hcu   //A-CAN 0x18FEF100
+{
+    oneof msg_ccvs1_hcu_firstByte
+    {
+        uint32 first_byte_1 = 1;
+        msg_ccvs1_hcu_first_byte_1 ccvs1_hcu_first_byte_1 = 2;
+    };
+    uint32 WheelBasedVehicleSpeed_low = 3;
+	uint32 WheelBasedVehicleSpeed_high = 4;
+    oneof msg_ccvs1_hcu_fourthByte
+    {
+        uint32 fourth_byte_1 = 5;
+        msg_ccvs1_hcu_fourth_byte_1 ccvs1_hcu_fourth_byte_1 = 6;
+    };
+    oneof msg_ccvs1_hcu_fifthByte
+    {
+        uint32 fifth_byte_1 = 7;
+        msg_ccvs1_hcu_fifth_byte_1 ccvs1_hcu_fifth_byte_1 = 8;
+    };   
+    uint32 CruiseCtrlSetSpeed = 9;
+    oneof msg_ccvs1_hcu_seventhByte
+    {
+        uint32 seventh_byte_1 = 10;
+        msg_ccvs1_hcu_seventh_byte_1 ccvs1_hcu_seventh_byte_1 = 11;
+    };  
+    oneof msg_ccvs1_hcu_eighthByte
+    {
+        uint32 eighth_byte_1 = 12;
+        msg_ccvs1_hcu_eighth_byte_1 ccvs1_hcu_eighth_byte_1 = 13;
+    };        
+
+}
+
+message msg_eec3_e      //0x18FEDF00
+{
+    uint32 Nominal_friction_percent_torque = 1;
+	uint32 Engine_desired_operating_speed_low = 2;
+	uint32 Engine_desired_operating_speed_high = 3;
+	uint32 Engine_operating_speed_asymmetry_adjustment = 4;
+	uint32 Estimated_Engine_Parasitic_Losses_Percent_Torque = 5;
+	uint32 Exhaust_gas_mass_flow_low = 6;
+	uint32 Exhaust_gas_mass_flow_high = 7;
+}
+
+message msg_tsc1_ae     //A-CAN 0x0C00000B
+{
+    oneof msg_tsc1_ae_firstByte
+    {
+        uint32 first_byte_1 = 1;
+        msg_tsc1_ae_first_byte_1 tsc1_ae_first_byte_1 = 2;
+    };
+	uint32 EngRqedSpeed_SpeedLimit_21 = 3;
+	uint32 EngRqedTorque_TorqueLimit_21 = 4;
+    oneof msg_tsc1_ae_fifthByte
+    {
+        uint32 fifth_byte_1 = 5;
+        msg_tsc1_ae_fifth_byte_1 tsc1_ae_fifth_byte_1 = 6;
+    };
+    oneof msg_tsc1_ae_sixthByte
+    {
+        uint32 sixth_byte_1 = 7;
+        msg_tsc1_ae_sixth_byte_1 tsc1_ae_sixth_byte_1 = 8;
+    };
+    uint32 rev1 = 9;
+    oneof msg_tsc1_ae_eighthByte
+    {
+        uint32 eighth_byte_1 = 10;
+        msg_tsc1_ae_eighth_byte_1 tsc1_ae_eighth_byte_1 = 11;
+    };
+}
+
+message msg_cvw_ebs     //0x18FE700B
+{
+	uint32 Powered_Vehicle_Weight_low = 1;
+	uint32 Powered_Vehicle_Weight_high = 2;
+	uint32 Gross_Combination_Weight_low = 3;
+	uint32 Gross_Combination_Weight_high = 4;
+	uint32 not_defined_1 = 5;
+	uint32 not_defined_2 = 6;
+	uint32 not_defined_3 = 7;
+	uint32 not_defined_4 = 8;
+}
+
+message msg_epb1        //0x18FF3C50
+{
+    oneof msg_epb1_firstByte
+    {
+        uint32 first_byte_1 = 1;
+        msg_epb1_first_byte_1 epb1_first_byte_1 = 2;
+    };
+    oneof msg_epb1_secondByte
+    {
+        uint32 second_byte_1 = 3;
+        msg_epb1_second_byte_1 epb1_second_byte_1 = 4;
+    };    
+    oneof msg_epb1_thirdByte
+    {
+        uint32 third_byte_1 = 5;
+        msg_epb1_third_byte_1 epb1_third_byte_1 = 6;
+    };     
+    oneof msg_epb1_fourthByte
+    {
+        uint32 fourth_byte_1 = 7;
+        msg_epb1_fourth_byte_1 epb1_fourth_byte_1 = 8;
+    }; 
+    uint32 State_of_EPB = 9;
+	uint32 PTposition = 10;
+	uint32 ParkBraPres = 11; 
+    oneof msg_epb1_eighthByte
+    {
+        uint32 eighth_byte_1 = 12;
+        msg_epb1_eighth_byte_1 epb1_eighth_byte_1 = 13;
+    };     
+}
+
+message msg_ms2_mcu     //0x18FF12EF
+{
+    oneof msg_ms2_mcu_firstByte
+    {
+        uint32 first_byte_1 = 1;
+        msg_ms2_mcu_first_byte_1 ms2_mcu_first_byte_1 = 2;
+    };
+    uint32 MS2_Mor_MaxTrq_Cent = 3;
+	uint32 MS2_Mor_MinTrq_Cent = 4;
+	uint32 MS2_Mor_MaxSpd_Cent = 5;
+	uint32 MS2_MorCavity_Temp = 6;
+	uint32 MS2_MorCtrl_Temp = 7;
+    oneof msg_ms2_mcu_seventhByte
+    {
+        uint32 seventh_byte_1 = 8;
+        msg_ms2_mcu_seventh_byte_1 ms2_mcu_seventh_byte_1 = 9;
+    };
+    uint32 MS2_CAN_Protocol_Version = 10;
+}
+
+//zxp0922
+message msg_eecu_to_ctrl
+{
+    int32 VehDa_prcActuTrq_mp = 1; //EEC1：实际扭矩百分比
+	int32 VehDa_prcDrvrDmdTrq_mp = 2; //EEC1：驾驶员需求扭矩百分比
+	uint32 VehDa_stSrcEngCtrl_mp = 3; //EEC1：发动机控制设备源地址
+	double VehDa_nEngSpd_mp = 4; //EEC1：发动机转速
+	int32 VehDa_prcTrqEngNomFric_mp = 5; //EEC2：发动机名义摩擦扭矩百分比
+	int32 VehDa_prcTrqEstimdLoss_mp = 6; //EEC2：发动机预估附件损失扭矩百分比
+	double VehDa_trqEngRef_mp = 7;// EC1:发动机参考扭矩
+	double VehDa_jEng_mp = 8;//EC1：发动机转动惯量
+	uint32 VehDa_stCluSwt_mp = 9; //CCVS：离合器状态 源地址：00
+	double VehDa_rAccrPedl_mp = 10;//EEC2:Accelerator pedal (AP) position 2（2021.7.14更新，新增信号）
+}
+
+message msg_tcu_to_ctrl
+{
+	double VehDa_rTraCurGear_mp = 1; //ETC2：变速箱当前档位传动比
+	int32 VehDa_stTraCurGear_mp = 2; //ETC2：变速箱当前档位
+	int32 VehDa_stTraSelGear_mp = 3; //ETC2：选择变速箱档位（2021.7.14更新，新增信号）
+	uint32 VehDa_stTraEgd_mp = 4; //ETC1:传动系统结合状态
+	uint32 VehDa_stTraSht_mp = 5; //ECT1:换挡状态
+	uint32 VehDa_stTraRdy4BrkRls_mp = 6; //ETC7：制动允许释放状态
+	uint32 VehDa_stTraTrqLim_mp = 7; //TSC1_TE：Engine Override Control Mode（2021.7.14更新，新增信号）
+	int32 VehDa_prcTraTrqLim_mp = 8; //TSC1_TE：Engine Requested Torque/Torque Limit（2021.7.14更新，新增信号）
+}
+
+message msg_ebs_to_ctrl
+{
+	double VehDa_rBrkPedl_mp = 1; //EBC1：制动踏板位置百分比
+	uint32 VehDa_stBrkPedl_mp = 2; //EBC1：制动踏板状态
+	uint32 VehDa_stSrcBrk_mp = 3; //EBC1:制动控制设备源地址VehDa_stSrcBrk_mp
+	double VehDa_vEgoSpd_mp = 4; //EBC2：前轴车速
+	double VehDa_mWght_mp = 5; //CVW：列车总质量
+	double VehDa_aEgoLgt_mp = 6; //VDC2：本车纵向加速度（2021.7.14备注，赋值接口VehDa_aEgoAcc_mp）
+    double VehDa_aEgoLat_mp = 7; //VDC2: 本车横向加速度
+    double VehDa_yawRateEgo_mp = 8; //VDC2:自车横摆角速度
+	double VehDa_pFrntLe_mp = 9; //EBC3:前轴左侧制动压力（2021.7.14备注，赋值接口VehDa_pFrontLeft_mp）
+	double VehDa_pFrntRi_mp = 10; //EBC3:前轴右侧制动压力
+	uint32 VehDa_stXBR_mp = 11; //EBC5:XBR系统状态
+	uint32 VehDa_stBrkTempWarn_mp = 12; //EBC5:制动系统温度报警状态
+	uint32 VehDa_stXBRActv_mp = 13; //EBC5:XBR激活状态
+	double VehDa_aXBRLim_mp = 14; //EBC5:XBR减速度限值
+}
+
+message msg_eps_to_ctrl
+{
+    double DE_phiSteerAngle = 1; // msg_ctlinfo1_eps1_kb:方向盘转角
+	double DE_phiSteerSpd = 2; //msg_ctlinfo1_eps1_kb：方向盘转速
+	double DE_SteerToruqe = 3; //msg_ctlinfo1_eps1_kb： 0
+	double DE_HandTorque = 4; // msg_ctlinfo1_eps1_kb: 方向盘手扭矩 steering torque
+	double DE_EpsMode = 5; //msg_ctlinfo2_eps1_kb：ControlDemandResponse；
+	double DE_EpsERRCode = 6;//msg_ctlinfo2_eps1_kb  Byte6（故障码）
+}
+
+message msg_vechicle_cmd
+{
+    float PthPln_lTrgLtr = 1;
+	float PthPln_phiTrgAng = 2;
+	float PthPln_kTrgCrv = 3;
+	float SpdPln_vTgtSpd = 4;
+	float SpdPln_aTgtAcc = 5;
+	uint32 BhvCrdn_numBhvID = 6;
+	uint32 BhvCrdn_CreepMod = 7;
+	float S = 8;
+	uint32 rounteID = 9;
+	uint32 BhvCrdn_GearReq = 10;
+}
+
+message msg_radar_to_ctrl
+{
+	uint32 Alarm_Level1 = 1;
+	uint32 State1 = 2;
+	double Dis1 = 3;
+	uint32 Alarm_Level2 = 4;
+	uint32 State2 = 5;
+	double Dis2 = 6;
+	uint32 Alarm_Level3 = 7;
+	uint32 State3 = 8;
+	double Dis3 = 9;
+	uint32 Alarm_Level4 = 10;
+	uint32 State4 = 11;
+	double Dis4 = 12;
+}
+
+message msg_bodycontrol_adcu_to_ctrl
+{
+	uint32 GasHornActivationSwitch = 1;
+	uint32 ElectricHornActivationSwitch = 2;
+	uint32 ADWiperSwitch = 3;
+	uint32 ADWiperControl = 4;
+	uint32 ADHeadlampSwitch = 5;
+	uint32 ADHeadlampControl = 6;
+	uint32 TurnLampControl = 7;
+	uint32 BrakelightCommand = 8;
+	uint32 ADWasherSwitch = 9;
+	uint32 FogLightSwitch = 10;
+	uint32 AmbientLightDisplayRequest = 11;
+	uint32 SeatbeltTightenRequest = 12;
+	uint32 DoorEmergencyUnlocking = 13;
+	uint32 SeatVibrationRequest = 14;
+	uint32 HazardlightSwitch = 15;
+	uint32 RearlightSwitch = 16;
+	uint32 LiftSwitch = 17;
+}
+
+message msg_epbs1_epb_to_ctrl
+{
+	uint32 EPB_ParkBraStatus = 1;
+	uint32 AH_ParkActive = 2;
+	uint32 AH_BraStatus = 3;
+	uint32 EPB_WorkMode = 4;
+	uint32 ChildLockActive = 5;
+	uint32 LowPreRelParkLimit = 6;
+	uint32 ResponsePriority = 7;
+	uint32 IdepedtBraOly = 8;
+	uint32 PrakBraForcTest = 9;
+	uint32 DriveHillStatus = 10;
+	uint32 EPB_BraSwitch = 11;
+	uint32 ParkBtSwitch = 12;
+	uint32 RelsBtSwitch = 13;
+	uint32 AHBtSwitch = 14;
+	uint32 IdepedtBtSwitch = 15;
+	uint32 ForcTestBtSwitch = 16;
+	uint32 SysStatus = 17;
+}
+
+message msg_epbc1_adu_to_ctrl
+{
+	uint32 ExternalBrakeControl = 1;
+	uint32 TractorBrakeControl = 2;
+	uint32 TrailerBrakeControl = 3;
+	uint32 ParkingBrakeControl = 4;
+	uint32 AutoholdBrakeControl = 5;
+	uint32 WorkingMode = 6;
+	uint32 CSUM = 7;
+}
+
+message msg_ptode_to_ctrl
+{
+	uint32 EnableSwitch_TransmissionInputShaftPTO_1 = 1;
+	uint32 EnableSwitch_TransmissionInputShaftPTO_2 = 2;
+}
+
+message msg_ptode_adcu_to_ctrl
+{
+	uint32 EnableSwitch_TransmissionInputShaftPTO_1 = 1;
+	uint32 EnableSwitch_TransmissionInputShaftPTO_2 = 2;
+}
+
+message msg_epb1_to_ctrl
+{
+    uint32 EPB_ParkBrKSt = 1;
+}
+
+message msg_etc7_to_ctrl_first_byte_1
+{
+    uint32 Transmission_Service_Indicator = 1;
+    uint32 not_defined_0 = 2;
+    uint32 not_defined_1 = 3;
+    uint32 not_defined_2 = 4;
+}
+
+message msg_etc7_to_ctrl_second_byte_1
+{
+    uint32 Transmission_Ready_for_Brake_Release = 1;
+    uint32 not_defined_3 = 2;
+    uint32 Transmission_Engine_Crank_Enable = 3;
+    uint32 not_defined_4 = 4;
+}
+
+message msg_etc7_to_ctrl_third_byte_1
+{
+    uint32 not_defined_5 = 1;
+    uint32 Transmission_Mode_3 = 2;
+    uint32 Transmission_Mode_2 = 3;
+    uint32 Transmission_Mode_1 = 4;
+}
+
+message msg_etc7_to_ctrl_fifth_byte_1
+{
+    uint32 Transmission_Mode_5 = 1;
+    uint32 Transmission_Mode_6 = 2;
+    uint32 Transmission_Mode_7 = 3;
+    uint32 Transmission_Mode_8 = 4;
+}
+
+message msg_etc7_to_ctrl_sixth_byte_1
+{
+    uint32 Transmission_Reverse_Gear_Shift_Inhibit_Status = 1;
+    uint32 Transmission_Warning_Indicator = 2;
+    uint32 Transmission_Mode_9 = 3;
+    uint32 Transmission_Mode_10 = 4;
+}
+
+message msg_etc7_to_ctrl_seventh_byte_1
+{
+    uint32 Transmission_Air_Supply_Pressure = 1;
+    uint32 Transmission_Auto_Neutral_State = 2;
+    uint32 Transmission_Manual_Mode = 3;
+}
+
+message msg_etc7_to_ctrl_eighth_byte_1
+{
+    uint32 Clutch_Overload_Warning = 1;
+    uint32 Clutch_Wear_Warning = 2;
+    uint32 Transmission_Temperature_Too_High = 3;
+    uint32 not_defined_6 = 4;
+}
+
+message msg_etc7_to_ctrl
+{
+    oneof msg_etc7_to_ctrl_firstByte
+    {
+        uint32 first_byte_1 = 1;
+        msg_etc7_to_ctrl_first_byte_1 etc7_to_ctrl_first_byte_1 = 2;
+    }
+    oneof msg_etc7_to_ctrl_secondByte
+    {
+        uint32 second_byte_1 = 3;
+        msg_etc7_to_ctrl_second_byte_1 etc7_to_ctrl_second_byte_1 = 4;
+    }
+    oneof msg_etc7_to_ctrl_thirdByte
+    {
+        uint32 third_byte_1 = 5;
+        msg_etc7_to_ctrl_third_byte_1 etc7_to_ctrl_third_byte_1 = 6;
+    }
+    uint32 Transmission_Requested_Gear_Feedback = 7; //3
+    oneof msg_etc7_to_ctrl_fifthByte
+    {
+        uint32 fifth_byte_1 = 8;
+        msg_etc7_to_ctrl_fifth_byte_1 etc7_to_ctrl_fifth_byte_1 = 9;
+    }
+    oneof msg_etc7_to_ctrl_sixthByte
+    {
+        uint32 sixth_byte_1 = 10;
+        msg_etc7_to_ctrl_sixth_byte_1 etc7_to_ctrl_sixth_byte_1 = 11;
+    }
+    oneof msg_etc7_to_ctrl_seventhByte
+    {
+        uint32 seventh_byte_1 = 12;
+        msg_etc7_to_ctrl_seventh_byte_1 etc7_to_ctrl_seventh_byte_1 = 13;
+    }
+    oneof msg_etc7_to_ctrl_eighthByte
+    {
+        uint32 eighth_byte_1 = 14;
+        msg_etc7_to_ctrl_eighth_byte_1 etc7_to_ctrl_eighth_byte_1 = 15;
+    }
+}
