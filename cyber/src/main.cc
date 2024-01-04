@@ -3,7 +3,7 @@
 * Description: MDC CANFD消息实例化demo样例代码（基于ARXML)，需要基于不同硬件连线和ARXML配置进行修改调测，不可直接商用
 * Author: 
 * Create: 2019-12-23
- */###
+ */#
 #include <thread>
 #include <chrono>
 #include <cstdio>
