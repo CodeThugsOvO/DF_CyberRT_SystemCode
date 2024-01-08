@@ -445,17 +445,16 @@ public:
 
 		auto Ros2canbus_ad_sub  = 
 					nh_->CreateReader("/LgtCtrlEx_ToCan_XBR_Info", &App::ComCore::ros2canbusLgtCtrlEx);
-		
 		auto Ros2canbus_ad_EPB_sub  = 
 					nh_->CreateReader("/LiftingEX_ToCan_EPB_Info", &App::ComCore::ros2canbusLiftingEX);
 		auto Ros2canbus_ad_PTO_sub  = 
 					nh_->CreateReader("/LiftingEX_ToCan_PTO_Info", &App::ComCore::ros2canbusLiftingEX);
 		
 		//2023.3.27举升需求
-		auto Ros2canbus_ad_LiftingEX_sub = nh_->CreateReader<fcv_mining_msgs::LiftingEx>("/LiftingEX_Info", &App::ComCore::getLifting_LiftComplishFlag);
-		
+		auto Ros2canbus_ad_LiftingEX_sub = 
+					nh_->CreateReader("/LiftingEX_Info",&App::ComCore::getLifting_LiftComplishFlag);
 		auto Ros2canbus_ad_LiftingEX_sub  =
-					nh_->CreateReader("/LiftingEX_Info", &App::ComCore::getLifting_LiftComplishFlag)};
+					nh_->CreateReader("/LiftingEX_Info", &App::ComCore::getLifting_LiftComplishFlag);
 		auto Ros2canbus_ad_BCM_sub  = 
 					nh_->CreateReader("/LiftingEX_ToCan_BCM_Info", &App::ComCore::ros2canbusLiftingEX);
 		auto Ros2canbus_ad_Command_ADCU_sub  =
