@@ -482,14 +482,19 @@ public:
 		auto MotionEx_Msg_sub =
 					nh_->CreateReader("/MotionEx_Info", &App::ComCore::MotionExMsgReceived);
 
-		auto intercan_pub = nh_->CreateWriter<dfcv_mining_msgs::Ros_To_Can>("/CTRL_TO_CAN_C_ADCU");
-		auto canbus2ros_pub = nh_->CreateWriter<canbus::Ros2canbus>("/canbus/canbus2ros");
+		auto intercan_pub = 
+					nh_->CreateWriter<dfcv_mining_msgs::Ros_To_Can>("/CTRL_TO_CAN_C_ADCU");
+		auto canbus2ros_pub = 
+					nh_->CreateWriter<canbus::Ros2canbus>("/canbus/canbus2ros");
 
-		auto canbus2ros_pub = nh_->CreateWriter<canbus::Ros2canbus>("/canbus/canbus2ros");
+		auto canbus2ros_pub = 
+					nh_->CreateWriter<canbus::Ros2canbus>("/canbus/canbus2ros");
 
-		auto canfdbus2ros_pub = nh_->CreateWriter<drdtu::Ros2canfdbus>("/CAN_TO_TBOX");
+		auto canfdbus2ros_pub = 
+					nh_->CreateWriter<drdtu::Ros2canfdbus>("/CAN_TO_TBOX");
 
-		auto CAN_TO_CTRL_EBS_pub = nh_->CreateWriter<dfcv_mining_msgs::CAN_TO_CTRL_EBS>("/EBS_To_Ctrl")};
+		auto CAN_TO_CTRL_EBS_pub = 
+					nh_->CreateWriter<dfcv_mining_msgs::CAN_TO_CTRL_EBS>("/EBS_To_Ctrl")};
 		
 		auto CAN_TO_CTRL_HCU_pub = 
 					nh_->CreateWriter<dfcv_mining_msgs::CAN_TO_CTRL_HCU>("/HCU_To_Ctrl");
@@ -521,7 +526,7 @@ public:
 		auto PTODE_ADCU_pub =
 					nh_->CreateWriter<dfcv_mining_msgs::PTODE_ADCU>("/PTODE_ADCU") ;
 		auto ETC7_pub =
-						nh_->CreateWriter<dfcv_mining_msgs::ETC7>("/msg_etc7_to_ctrl") ;//11.10xinzeng6
+					nh_->CreateWriter<dfcv_mining_msgs::ETC7>("/msg_etc7_to_ctrl") ;//11.10xinzeng6
 		//5.5注释掉
 		//ros::Publisher TBoxMove
 		//							 nh_.advertise<dfcv_mining_msgs::PTODE_ADCU>("/TBOX_MOVE",100)};
